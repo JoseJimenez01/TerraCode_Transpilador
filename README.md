@@ -13,6 +13,7 @@ Profesor: Aurelio Sanabria
 ---
 ## Descripción
 
+El proyecto fue desarrollado en equipo, en el curso de Compiladores e Intérpretes.
 
 ## Estructura del proyecto
 📁 /TerraCode  
@@ -39,9 +40,10 @@ Profesor: Aurelio Sanabria
 |--- /main.py # Ejecuta todo el proyecto  
 |--- /README.md # Esta info  
 
+## Lenguajes utilizados
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
 ## Como ejecutar el codigo o los ejemplos
 1. Usando la herramienta Visual Studio Code, teniendo descargada la extensión de python(la de microsoft puede ser) y usando la consola del mismo, o simplemente usando de una consola que disponga.  
   
 2. Ubicarse en la carpeta TerraCode en la consola, y escribir: py main.py (ruta_del_archivo)
-
-3. 

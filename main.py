@@ -5,6 +5,7 @@ Funcionalidad: Verificar si el archivo que contiene el código cumple
 """
 
 import argparse
+import os
 from Archivos.cargarArchivo import cargar_prueba
 from Explorador.explorador import Scanner
 from errores import imprimir_errores
@@ -26,7 +27,7 @@ def main():
     args = parser.parse_args()
 
     # Cargar el archivo de prueba
-    print(f"\033[34mCargando archivo desde:\033[0m \033[33m{args.path}\033[0m")
+    print(f"\033[34mCargando archivo desde:\033[0m \033[33m{os.path.abspath(args.path)}\033[0m")
     lineas = cargar_prueba(args.path)
 
     # Explorador
