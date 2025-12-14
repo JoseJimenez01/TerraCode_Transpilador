@@ -1,0 +1,17 @@
+* Función que retorna la tabla de multiplicar de un número *
+sembrar tablaMultiplicar(numero, tamannoTabla) {
+    **
+    *Entradas: El número a multiplicar y el tamaño de la tabla.*
+    *Salidas: Impresión en pantalla de la tabla de multiplicar.*
+    **
+
+    maceta contador = sumatera(1, 0)
+
+    podar(#Tabla de multiplicar del número #, numero)
+
+    fotosintesis(lirio(contador, 10)) {
+        podar(contador, # x #, numero, # = #, contador  BAMBU  numero)
+        contador = sumatera(contador, 1)
+    }
+} florecer
+tablaMultiplicar(5, 10)

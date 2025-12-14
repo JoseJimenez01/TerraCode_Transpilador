@@ -1,0 +1,56 @@
+
+sembrar dividir_billetes(cantidad){
+    
+    maceta b10000 = sumatera(0, 0)
+    maceta b5000 = sumatera(0, 0)
+    maceta b2000 = sumatera(0, 0)
+    maceta b1000 = sumatera(0, 0)
+    maceta b500 = sumatera(0, 0)
+    maceta b100 = sumatera(0, 0)
+    maceta b50 = sumatera(0, 0)
+
+    fotosintesis (rosa(cantidad, 10000)){
+        maceta b10000 = sumatera(b10000, 1)
+        maceta cantidad = reseda(cantidad, 10000)
+    }
+
+    fotosintesis (rosa(cantidad, 5000)) {
+        maceta b5000 = sumatera(b5000, 1)
+        maceta cantidad = reseda(cantidad, 5000)
+    }
+
+    fotosintesis (rosa(cantidad, 2000)) {
+        maceta b2000 = sumatera(b2000, 1)
+        maceta cantidad = reseda(cantidad, 2000)
+    }
+
+    fotosintesis (rosa(cantidad, 1000)) {
+        maceta b1000 = sumatera(b1000, 1)
+        maceta cantidad = reseda(cantidad, 1000)
+    }
+
+    fotosintesis (rosa(cantidad, 500)) {
+        b500 = sumatera(b500, 1)
+        maceta cantidad = reseda(cantidad, 500)
+    }
+
+    ftosintesis (rosa(cantidad, 100)) {
+        maceta b100 = sumatera(b100, 1)
+        maceta cantidad = reseda(cantidad, 100)
+    }
+
+    fotosintesis (rosa(cantidad, 50))  {
+        maceta b50 = sumatera(b50, 1)
+        maceta cantidad = reseda(cantidad, 50)
+    }
+
+    # Mostrar resultados
+    podar(#Billetes de 10,000:#, madurar(b10000))
+    podar(#Billetes de 5,000 :#, madurar(b5000))
+    podar(#Billetes de 2,000 :#, madurar(b2000))
+    podar(#Billetes de 1,000 :#, madurar(b1000))
+    podar(#Billetes de 500   :#, madurar(b500))
+    podar(#Billetes de 100   :#, madurar(b100))
+    podar(#Billetes de 50    :#, madurar(b50))
+    podar(#Restante (no usado):#, madurar(cantidad))
+}

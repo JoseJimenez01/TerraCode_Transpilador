@@ -1,0 +1,196 @@
+
+* ---------------------- Definicion de variables ---------------------- *
+
+* Texto de bienvenida e instrucciones *
+semilla b1 = #\n\n************************************************************\n#
+semilla b2 = #Bienvenid@ al juego de 3 en raya para probar el transpilador\n#
+semilla b3 = #************************************************************\n#
+semilla i1 = #INFORMACION:\n#
+semilla i2 = #Para digitar en una casilla, escriba el valor FilaColumna\n#
+semilla i3 = #en su turno.\nLa letra de la fila en mayuscula.\n#
+
+* Casillas del tablero*
+semilla A1 = # #
+semilla A2 = # #
+semilla A3 = # #
+semilla B1 = # #
+semilla B2 = # #
+semilla B3 = # #
+semilla C1 = # #
+semilla C2 = # #
+semilla C3 = # #
+semilla casilla = ##
+
+* Jugadores y turno actual *
+semilla ganador = muerta
+semilla jugador1 = # #
+semilla jugador2 = # #
+semilla turno = #X#
+
+* Contador de movimientos *
+semilla movimientos = 0
+
+* ---------------------- Definicion de funciones ---------------------- *
+
+* Esta funcion imprime el tablero. *
+sembrar mostrarTablero() {
+    podar(#    1   2   3#)
+    podar(#  -------------#)
+    podar(#A | #, A1, # | #, A2, # | #, A3, # |#)
+    podar(#  -------------#)
+    podar(#B | #, B1, # | #, B2, # | #, B3, # |#)
+    podar(#  -------------#)
+    podar(#C | #, C1, # | #, C2, # | #, C3, # |#)
+    podar(#  -------------#)
+} florecer
+
+* Esta funcion verifica si hay un ganador, en todas las posibles combinaciones *
+sembrar verificarGanador() {
+    
+    exterior( injerto( cactus(A1, A2), cactus(A2, A3), acaro cactus(A3, # #) ) ) {
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(B1, B2), cactus(B2, B3), acaro cactus(B3, # #) ) ) {
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(C1, C2), cactus(C2, C3), acaro cactus(C3, # #) ) ) {
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(A1, B1), cactus(B1, C1), acaro cactus(C1, # #) ) ) {
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(A2, B2), cactus(B2, C2), acaro cactus(C2, # #) ) ) {
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(A3, B3), cactus(B3, C3), acaro cactus(C3, # #) ) ) {
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(A1, B2), cactus(B2, C3), acaro cactus(C3, # #) ) ) {
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(A3, B2), cactus(B2, C1), acaro cactus(C1, # #) ) ) {
+        cosechar viva
+    }
+
+    cosechar muerta
+} florecer
+
+* Cambia el signo a usar en el siguiente turno. *
+sembrar cambiarTurno() {
+    exterior ( cactus(turno, #X#) ) {
+        semilla turno = #O#
+    } interior {
+        semilla turno = #X#
+    }
+} florecer
+
+* Asigna el símbolo del turno a la casilla indicada si está vacía *
+sembrar asignarCasilla(nombre) {
+
+    exterior( injerto( cactus(nombre, #A1#), cactus(A1, # #) ) ) {
+        semilla A1 = turno
+        cosechar viva
+    }
+
+    exterior( injerto( cactus(nombre, #A2#), cactus(A2, # #) ) ) {
+        semilla A2 = turno
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(nombre, #A3#), cactus(A3, # #) ) ) {
+        semilla A3 = turno
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(nombre, #B1#), cactus(B1, # #) ) ) {
+        semilla B1 = turno
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(nombre, #B2#), cactus(B2, # #) ) ) {
+        semilla B2 = turno
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(nombre, #B3#), cactus(B3, # #) ) ) {
+        semilla B3 = turno
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(nombre, #C1#), cactus(C1, # #) ) ) {
+        semilla C1 = turno
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(nombre, #C2#), cactus(C2, # #) ) ) {
+        C2 = turno
+        cosechar viva
+    }
+
+    exterior ( injerto( cactus(nombre, #C3#), cactus(C3, # #) ) ) {
+        C3 = turno
+        cosechar viva
+    }
+
+    podar(#Casilla inválida o ya ocupada.#)
+    cosechar muerta
+
+} florecer
+
+* ---------------------- Definicion del programa principal---------------------- *
+
+* Bienvenida e indicaciones *
+podar(b1)
+podar(b2)
+podar(b3)
+podar(i1)
+podar(i2)
+podar(i3)
+
+* Guardar jugadores *
+jugador1 = recolectar(#Digite el nombre del primer jugador, este usara la X: #)
+jugador2 = recolectar(#Digite el nombre del segundo jugador, este usara el O: #)
+
+* Ciclo principal *
+fotosintesis(viva) {
+
+    mostrarTablero()
+
+    casilla = recolectar(#Turno de #, turno, #. Escriba la casilla: #)
+
+    * Asignamos la casilla *
+    exterior ( cactus(asignarCasilla(jugada), viva) ) {
+
+        movimientos = sumatera(movimientos, 1)
+
+        ganador = verificarGanador()
+
+        *Si hay ganador, imprime la info*
+        exterior ( cactus(ganador, viva) ) {
+            mostrarTablero()
+            exterior ( cactus(turno, #X#) ) {
+                podar(#¡Felicidades, gano #, jugador1, #!#)
+            } interior {
+                podar(#¡Felicidades, gano #, jugador2, #!#)
+            }
+            cosechar
+        }
+
+        * Caso de empate *
+        interior ( cactus(movimientos, 9) ) {
+            mostrarTablero()
+            podar(#¡Lo sentimos, hubo un empate!#)
+            cosechar
+        }
+
+        * Si no hay ganador o empate, cambia el turno *
+        cambiarTurno()
+    }
+}

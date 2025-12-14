@@ -1,0 +1,8 @@
+semilla largo1 = medir(#Hola esto es una prueba muy seria#)
+semilla largo2 = medir(#Hola esto es una prueba muy seria version 2#)
+
+exterior(cactus(largo1,largo2)) {
+    podar(#BIEEEN, SON IGUALES#)
+} interior {
+    podar(#ERROR NO SON IGUALES#)
+}

@@ -1,0 +1,33 @@
+sembrar contar_primos_hasta(n) {
+    exterior (bonsai(n, 2)){
+        podar(#No hay números primos menores o iguales a #)
+        podar(n)
+    }
+
+    maceta cantidad_primos = sumater(0, 0)
+    maceta numero = sumatera(2, 0)
+
+    fotoisntesis(lirio(numero, n)) {
+        maceta es_primo = viva
+
+        maceta divisor = sumatera(2, 0)
+
+        fotosistesis(magnolia(num, divisor)) {
+            exterior(cactus(magnolia(numero, divisor), 0)) {
+                maceta es_primo = muerta
+            }
+
+            maceta divisor = sumatera(divisor, 1)
+        }
+        
+        exterior(es_primo) {
+            podar(numero)
+            maceta cantidad_primos = sumatera(cantidad_primos, 1)
+        }
+        maceta numero = sumatera(numero, 1)
+
+        podar(#Cantidad de primos encontrados:#)
+        podar(cantidad_primos)
+    }  
+} florecer
+

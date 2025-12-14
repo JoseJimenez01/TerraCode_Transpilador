@@ -1,0 +1,14 @@
+sembrar mostrarEspaciosDisponibles() {
+    **
+    *Muestra cuántos espacios hay usando una repetición.*
+    **
+    maceta contador = sumatera(1, 0)
+    maceta total = sumatera(3, 0)
+
+    fotosintesis(lirio(contador, total)) {
+        podar(#Espacio #, contador, # disponible.#)
+        maceta contador = sumatera(contador, 1)
+    }
+} florecer
+
+mostrarEspaciosDisponibles()

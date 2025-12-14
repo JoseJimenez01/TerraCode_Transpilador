@@ -1,0 +1,14 @@
+sembrar concatenar_textos() {
+
+    *Solicitar el primer texto al usuario*
+    maceta texto1 = Recolectar(#Ingrese el primer fragmento de texto: #)
+
+    *Solicitar el segundo texto al usuario*
+    maceta texto2 = Recolectar(#Ingrese el segundo fragmento de texto: #)
+
+    *Concatenar los textos*
+    maceta mensaje_completo = conocarpus(texto1, texto2)
+
+    *Mostrar el mensaje completo*
+    podar(#El mensaje completo es: #, mensaje_completo, #.#)
+} florecer

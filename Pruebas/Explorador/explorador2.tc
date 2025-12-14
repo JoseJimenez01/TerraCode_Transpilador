@@ -1,0 +1,34 @@
+maceta condicion = viva 
+planta(cactus(condicion, viva)) { 
+    *Imprime las opciones del menú* 
+    pSodar(# Menú Principal #) 
+    podar(#1. Inventario#) 
+    podar(#2. Ventas#) 
+    podar(#3. Salir#) 
+    
+    *Preguntar al usuario por la opción que desea* 
+    flor opcion = recolectar(#Ingrese la opción a realizar: #) 
+    *Casos* *Caso 1* 
+    hoja_compuesta(#1#) { 
+        inventario() 
+        maceta condicion = muerta 
+    } 
+    
+    *Caso 2* 
+    hoja_compuesta(#2#) { 
+        ventas() 
+        maceta condicion = muerta 
+    } 
+
+    *Caso 3* 
+    hoja_compuesta(#3#) { 
+        podar(#Está saliendo del programa....#) 
+        maceta condicion = muerta 
+    } 
+    
+    *Caso Predeterminado* 
+    hoja_simple() { 
+        podar(#Opción Inválida. Vuelva a intentarlo#) 
+        podar(# #)
+    } 
+}

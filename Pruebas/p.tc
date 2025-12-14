@@ -1,0 +1,5 @@
+sembrar prueba(dato) {
+    maceta suma = sumatra(dato, 1)
+} florecer
+
+prueba(19.0)

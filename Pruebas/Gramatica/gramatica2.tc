@@ -1,0 +1,13 @@
+sembrar factorial(plantas) {
+    *Calcular el número de formas en las que se pueden organizar 'plantas' en un jardín*
+    Exterior(bonsai(plantas, 0)) {
+      Podar(#No se pueden organizar un número negativo de plantas#)
+    }
+    maceta combinaciones = sumatera(1,0)
+     
+    fotosíntesis(secuoya(plantas, 1)) {
+        combinaciones = combinaciones bambu plantas
+        maceta plantas = reseda(plantas, 1)
+        cosechar combinaciones
+    }
+} florecer

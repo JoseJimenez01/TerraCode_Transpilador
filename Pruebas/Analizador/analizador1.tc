@@ -1,0 +1,18 @@
+sembrar coloresFavoritos() { 
+    **
+    *Solicita dos colores al usuario y los concatena en un mensaje.*
+    **
+    maceta color1 = recolectar(#Ingrese su primer color favorito: #)
+
+    maceta color2 = recolectar(#Ingrese su segundo color favorito: #)
+
+    maceta mensaje = conocarpus(color1, # y #, color2)
+
+    podar(#Tus colores favoritos son: #, mensaje)
+
+    cosechar color1
+} florecer 
+
+podar(#Bienvenid@s al programa#)
+
+semilla mensajeFinal = coloresFavoritos()

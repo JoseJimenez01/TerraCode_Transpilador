@@ -1,0 +1,18 @@
+*Esto deberia dar error*
+
+sembrar cicloPrueba() {
+    maceta contador = 0
+    maceta condicion = #muerta#
+
+    fotosintesis(acaro condicion) {
+        maceta contador = sumatra(contador, 1)
+
+        poda(#TODO GOOOD#)
+
+        exterior(cactus(contador, 10)) {
+            maceta condicion = viva
+        }
+    }
+}
+
+cicloPrueba()

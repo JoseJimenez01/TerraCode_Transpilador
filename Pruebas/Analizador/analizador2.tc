@@ -1,0 +1,14 @@
+sembrar evaluarPuntaje() {
+    **
+    *Compara un puntaje con un umbral y muestra si es alto o bajo.*
+    **
+    maceta puntaje = sumatra(85, 0)
+
+    exterior(secuoya(puntaje, 70)) {
+        podar(#Puntaje alto.#)
+    } interior {
+        podar(#Puntaje bajo.#)
+    }
+} florecer
+
+evaluarPuntaje()

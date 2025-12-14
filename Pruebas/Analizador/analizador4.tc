@@ -1,0 +1,14 @@
+
+sembrar imprimir_pares_hasta_tope(tope) {
+    maceta numero = sumatera(1, 0)
+
+    fotosintesis(lirio(numero, tope)){
+        exterior(cactus(magnolia(numero, 2), 0)){
+            maceta stringEntero = madurar(numero)
+
+            podar(numero)
+        }
+
+        maceta numero = sumatera(numero, 1)
+    }
+} 

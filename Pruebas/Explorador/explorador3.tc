@@ -1,0 +1,15 @@
+sembrar ingresarCarro() {
+    maceta placa = ##
+    maceta espacios = sumater(5, 0)
+
+    maceta placa = recolectar(#Ingrese la placa del carro: #)
+
+    exterior(secuoya(espacios, 0)) {
+        podar(#Ingreso exitoso del carro con placa: #, placa)
+        maceta espacios = reseda(espacios, 1)
+    } interior {
+        podar(#Parqueo lleno. No hay espacio disponible.#)
+    }
+} florecer
+
+ingresarCarro()

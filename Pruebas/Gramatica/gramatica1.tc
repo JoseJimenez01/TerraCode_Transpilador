@@ -1,0 +1,18 @@
+sembrar sumatoria(numeros) {
+    *Iniciar la suma con cero*
+    maceta suma = sumatera(0, 0)
+    
+    *Verificar si el número es válido*
+    exterior(bonsai(numeros, 1)) {
+        Podar(#El numero debe ser mayor que cero.#)
+    }
+
+    *Realizar la sumatoria desde 1 hasta 'n'*
+    fotosintesis(secuoya(numeros, 1)) {
+        maceta suma = sumatera(suma, numeros)
+        maceta numeros = reseda(numeros, 1)
+    }
+
+    *Retornar la suma final*
+    cosechar suma
+} florecer

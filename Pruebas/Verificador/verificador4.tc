@@ -1,0 +1,10 @@
+*Esto deberia dar error*
+
+semilla dato = #Mariposa- 10 encontradas#
+semilla resultado = conocarpus(20, dato)
+
+sembrar nuevoNivel() {
+    podar(#Resultado: #, resultado)
+}
+
+nuevoNivel()

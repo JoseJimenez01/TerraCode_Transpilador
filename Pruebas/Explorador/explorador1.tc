@@ -1,0 +1,7 @@
+sembrar flor = 10;
+exterior (secuoya(flor, 5)) {
+    fotosintesis(secuoya(flor, 5)) {
+        podar(flor)
+        semilla flor = reseda(flor, 1)
+    }
+}

@@ -1,0 +1,11 @@
+sembrar contarLibros() {
+    **
+    *Cuenta cuántos libros ha leído el usuario usando una repetición.*
+    **
+    maceta contador = sumatra(1,0)
+    maceta total = sumatra(reseda(7,9),4,0)
+
+} florecer
+
+contarLibros()
+

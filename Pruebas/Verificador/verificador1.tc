@@ -1,0 +1,8 @@
+sembrar sumar (operador1,operador2) {
+    maceta resultado = sumatra(operador1,operador2)
+
+    cosechar resultado
+} florecer
+
+semilla resultado = sumar(12.0, 15.8)
+podar(resultado)

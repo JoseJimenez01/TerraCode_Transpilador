@@ -1,0 +1,40 @@
+sembrar menu() {
+    *Asignar la condición*
+    maceta condicion
+    condicion = viva
+ 
+    planta(cactus(condicion, viva)) {
+        *Imprime las opciones del menú*
+        podar(#  	Menú Principal 	#)
+        podar(#1. Inventario#)
+        podar(#2. Ventas#)
+        podar(#3.  Salir#)
+        *Preguntar al usuario por la opción que desea*
+        flor opcion = Recolectar(#Ingrese la opción a realizar: #)
+     
+        *Casos*
+        *Caso 1*
+        Hoja(#1#) {
+            inventario()
+            condicion = Muerta
+        }
+                          	
+        *Caso 2*
+        Hoja(#2#) {
+            ventas()
+            condicion = Muerta
+        }
+                          	
+        *Caso 3*
+        Hoja(#3#) {
+            Podar(#Está saliendo del programa....#)
+            condicion = Muerta
+       }  
+                          	
+       *Caso Predeterminado*
+       Hoja() {
+           Podar(#Opción Inválida. Vuelva a intentarlo#)
+           Podar(# #)
+       }
+    }
+} Florecer
