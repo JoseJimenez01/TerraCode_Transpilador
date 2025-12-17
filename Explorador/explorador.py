@@ -4,6 +4,7 @@ Explorador de Terracode
 
 import re
 from Explorador.tokens import TipoToken, Token
+from errores import imprimir_errores
 
 class Scanner:
     """
@@ -115,3 +116,17 @@ class Scanner:
         Funcionalidad: Devuelve la lista de errores para ser usados fuera.
         """
         return self.errores
+
+    def imprirmirErrores(self, path):
+        """
+        Obtiene los errores lexicos que se hayan almacenado y los imprime
+
+        :param path: La ruta del archivo .tc para formateo del error.
+        :returns: -1 si hay errores, 0 si no hay.
+        """
+        errores_lexicos = self.obtener_errores()
+
+        if errores_lexicos:
+            imprimir_errores(errores_lexicos, path, 1)
+            return -1
+        return 0

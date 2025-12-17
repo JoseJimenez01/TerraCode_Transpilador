@@ -5,6 +5,7 @@ Analizador de Terracode
 from Explorador.explorador import TipoToken # Importar explorador y los tokens
 from Analizador.NodoASA import NodoASA # Importar la clase NodoASA
 from Analizador.ASA import ASA #Imporatar la clase ASA
+from errores import imprimir_errores
 
 
 class Analizador:
@@ -2131,3 +2132,17 @@ class Analizador:
         """
 
         self.asa.imprimir_asa()
+
+    def imprimirErrores(self, path):
+        """
+        Obtiene los errores sintacticos que se hayan almacenado y los imprime
+
+        :param path: La ruta del archivo .tc para formateo del error.
+        :returns: -1 si hay errores, 0 si no hay.
+        """
+        errores_sintacticos = self.obtener_errores()
+
+        if errores_sintacticos:
+            imprimir_errores(errores_sintacticos, path, 2)
+            return -1
+        return 0
